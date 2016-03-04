@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>ShulApp</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1 align="center">ShulApp</h1>
+
+			<div class="upper-pane">
+				<div class="group-container">
+					<h2>My Input</h2>
+					<div id="groupA">
+						<textarea rows="15" cols="50"></textarea>
+					</div>
+				</div>
+				<div class="group-container">
+					<h2>Customer Input</h2>
+					<div id="groupB">
+						<textarea rows="15" cols="50"></textarea>
+					</div>
+				</div>
+				<div class="group-container">
+					<div class="v-align">
+						<label for="charMatch">char to match</label>
+						<input type="range" min="1" max="5" value="4" id="charMatch" step="1" oninput="outputUpdate(value)">
+						<output for="charMatch" id="charMatchOut">4</output>
+					</div>
+				</div>
+			</div>
+			<div class="lower-pane">
+				<div id="error" class="center-wrapper hide">
+					<div class="error"></div>
+				</div>
+				<div id="success" class="center-wrapper hide">
+					<div class="success"></div>
+				</div>
+				<div id="action" class="center-wrapper">
+					<input type="button" value="GO!"/>
+				</div>
+
+				<div class="result-container hide">
+					<h2>Forward Result</h2>
+					<div id="result"></div>
+				</div>
+				<div class="result-container hide">
+					<h2>Reverse Result</h2>
+					<div id="resultRev"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/logic.js"></script>
+		<script>
+			function outputUpdate(val) {
+				document.querySelector('#charMatchOut').value = val;
+			}
+		</script>
+	</body>
+</html>
