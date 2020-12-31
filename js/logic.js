@@ -26,7 +26,7 @@
 			}.bind(this));
 		},
 		processBarcodeAndSerialIntoObject: function(str,serial) {
-			var arr = str.replace(/\s+/g, ' ').split(" ");
+			var arr = str.trim().replace(/\s+/g, ' ').split(" ");
 			if(arr.length == 2){
 				return {
 					serial: arr[0],
