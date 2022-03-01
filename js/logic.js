@@ -87,7 +87,8 @@
 			}
 		},
 		addResultToList: function(matchList,resObj,me){
-			var wrongLength = (resObj.other.barcode.length != 6 && resObj.other.barcode.length != 8);
+			const otherBarcodeLength = resObj.other.barcode.length;
+			var wrongLength = otherBarcodeLength != 6 && otherBarcodeLength != 8 && otherBarcodeLength != 10;
 			if(resObj.count >= CHAR_FOR_MATCH || wrongLength){
 				if(!matchList.hasOwnProperty(me)){
 					matchList[me.barcode] = [];
