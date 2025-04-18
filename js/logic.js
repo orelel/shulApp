@@ -51,7 +51,7 @@
         return `${firstWord} ${reversedSecondWord}`;
       });
       // Join the output array into a single string with line breaks
-      document.getElementById("reverseOutput").value = output;
+      document.getElementById("reverseOutput").value = output.join("\n");
     },
 
     reverseComplement(line) {
