@@ -45,7 +45,7 @@
     handleReverseInput() {
       const input = document.getElementById("reverseInput").value.trim().toUpperCase().split("\n");
       const output = input.map(line => {
-        const [firstWord, secondWord] = line.split(" ");
+        const [firstWord, secondWord] = line.split(/\s+/);
         if (!secondWord) return line; // If there's no second word, return the line as is
         const reversedSecondWord = app.reverseComplement(secondWord);
         return `${firstWord} ${reversedSecondWord}`;
